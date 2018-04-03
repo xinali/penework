@@ -1,0 +1,277 @@
+ERROR: 2018-03-31 13:37:19 log.py error
+ERROR: 2018-03-31 13:37:58 log.py error
+ERROR: 2018-03-31 13:39:32 log.py error
+ERROR: 2018-03-31 13:46:19 log.py integer division or modulo by zero
+ERROR: 2018-03-31 13:46:19 log.py 
+Traceback (most recent call last):
+  File "test.py", line 10, in main
+    print b / a
+ZeroDivisionError: integer division or modulo by zero
+ERROR: 2018-03-31 13:47:32 log.py 
+Traceback (most recent call last):
+  File "test.py", line 10, in main
+    print b / a
+ZeroDivisionError: integer division or modulo by zero
+DEBUG 2018-04-03 06:43:38 registry.py registered 'bcrypt' handler: <class 'passlib.handlers.bcrypt.bcrypt'>
+DEBUG 2018-04-03 06:43:38 registry.py registered 'des_crypt' handler: <class 'passlib.handlers.des_crypt.des_crypt'>
+DEBUG 2018-04-03 06:43:38 registry.py registered 'pbkdf2_sha256' handler: <class 'passlib.handlers.pbkdf2.pbkdf2_sha256'>
+DEBUG 2018-04-03 06:43:38 registry.py registered 'pbkdf2_sha512' handler: <class 'passlib.handlers.pbkdf2.pbkdf2_sha512'>
+DEBUG 2018-04-03 06:43:38 registry.py registered 'sha256_crypt' handler: <class 'passlib.handlers.sha2_crypt.sha256_crypt'>
+DEBUG 2018-04-03 06:43:38 registry.py registered 'sha512_crypt' handler: <class 'passlib.handlers.sha2_crypt.sha512_crypt'>
+DEBUG 2018-04-03 06:43:38 registry.py registered 'plaintext' handler: <class 'passlib.handlers.misc.plaintext'>
+DEBUG 2018-04-03 06:43:38 registry.py registered 'hex_md5' handler: <class 'passlib.handlers.digests.hex_md5'>
+NOTICE: 2018-04-03 06:43:38 _internal.py  * Running on http://0.0.0.0:8070/ (Press CTRL+C to quit)
+NOTICE: 2018-04-03 06:43:38 _internal.py  * Restarting with stat
+DEBUG 2018-04-03 06:43:39 registry.py registered 'bcrypt' handler: <class 'passlib.handlers.bcrypt.bcrypt'>
+DEBUG 2018-04-03 06:43:39 registry.py registered 'des_crypt' handler: <class 'passlib.handlers.des_crypt.des_crypt'>
+DEBUG 2018-04-03 06:43:39 registry.py registered 'pbkdf2_sha256' handler: <class 'passlib.handlers.pbkdf2.pbkdf2_sha256'>
+DEBUG 2018-04-03 06:43:39 registry.py registered 'pbkdf2_sha512' handler: <class 'passlib.handlers.pbkdf2.pbkdf2_sha512'>
+DEBUG 2018-04-03 06:43:39 registry.py registered 'sha256_crypt' handler: <class 'passlib.handlers.sha2_crypt.sha256_crypt'>
+DEBUG 2018-04-03 06:43:39 registry.py registered 'sha512_crypt' handler: <class 'passlib.handlers.sha2_crypt.sha512_crypt'>
+DEBUG 2018-04-03 06:43:39 registry.py registered 'plaintext' handler: <class 'passlib.handlers.misc.plaintext'>
+DEBUG 2018-04-03 06:43:39 registry.py registered 'hex_md5' handler: <class 'passlib.handlers.digests.hex_md5'>
+WARNING: 2018-04-03 06:43:39 _internal.py  * Debugger is active!
+NOTICE: 2018-04-03 06:43:39 _internal.py  * Debugger PIN: 101-161-083
+NOTICE: 2018-04-03 06:44:56 _internal.py 172.17.0.1 - - [03/Apr/2018 06:44:56] "POST /api/login HTTP/1.1" 500 -
+NOTICE: 2018-04-03 06:45:12 _internal.py  * Detected change in '/root/work/google/scanner/penework/app/views.py', reloading
+NOTICE: 2018-04-03 06:45:13 _internal.py  * Restarting with stat
+DEBUG 2018-04-03 06:45:14 registry.py registered 'bcrypt' handler: <class 'passlib.handlers.bcrypt.bcrypt'>
+DEBUG 2018-04-03 06:45:14 registry.py registered 'des_crypt' handler: <class 'passlib.handlers.des_crypt.des_crypt'>
+DEBUG 2018-04-03 06:45:14 registry.py registered 'pbkdf2_sha256' handler: <class 'passlib.handlers.pbkdf2.pbkdf2_sha256'>
+DEBUG 2018-04-03 06:45:14 registry.py registered 'pbkdf2_sha512' handler: <class 'passlib.handlers.pbkdf2.pbkdf2_sha512'>
+DEBUG 2018-04-03 06:45:14 registry.py registered 'sha256_crypt' handler: <class 'passlib.handlers.sha2_crypt.sha256_crypt'>
+DEBUG 2018-04-03 06:45:14 registry.py registered 'sha512_crypt' handler: <class 'passlib.handlers.sha2_crypt.sha512_crypt'>
+DEBUG 2018-04-03 06:45:14 registry.py registered 'plaintext' handler: <class 'passlib.handlers.misc.plaintext'>
+DEBUG 2018-04-03 06:45:14 registry.py registered 'hex_md5' handler: <class 'passlib.handlers.digests.hex_md5'>
+WARNING: 2018-04-03 06:45:14 _internal.py  * Debugger is active!
+NOTICE: 2018-04-03 06:45:14 _internal.py  * Debugger PIN: 101-161-083
+NOTICE: 2018-04-03 06:45:18 _internal.py 172.17.0.1 - - [03/Apr/2018 06:45:18] "POST /api/login HTTP/1.1" 500 -
+DEBUG 2018-04-03 06:45:30 registry.py registered 'bcrypt' handler: <class 'passlib.handlers.bcrypt.bcrypt'>
+DEBUG 2018-04-03 06:45:30 registry.py registered 'des_crypt' handler: <class 'passlib.handlers.des_crypt.des_crypt'>
+DEBUG 2018-04-03 06:45:30 registry.py registered 'pbkdf2_sha256' handler: <class 'passlib.handlers.pbkdf2.pbkdf2_sha256'>
+DEBUG 2018-04-03 06:45:30 registry.py registered 'pbkdf2_sha512' handler: <class 'passlib.handlers.pbkdf2.pbkdf2_sha512'>
+DEBUG 2018-04-03 06:45:30 registry.py registered 'sha256_crypt' handler: <class 'passlib.handlers.sha2_crypt.sha256_crypt'>
+DEBUG 2018-04-03 06:45:30 registry.py registered 'sha512_crypt' handler: <class 'passlib.handlers.sha2_crypt.sha512_crypt'>
+DEBUG 2018-04-03 06:45:30 registry.py registered 'plaintext' handler: <class 'passlib.handlers.misc.plaintext'>
+DEBUG 2018-04-03 06:45:30 registry.py registered 'hex_md5' handler: <class 'passlib.handlers.digests.hex_md5'>
+NOTICE: 2018-04-03 06:45:30 _internal.py  * Running on http://0.0.0.0:8070/ (Press CTRL+C to quit)
+NOTICE: 2018-04-03 06:45:30 _internal.py  * Restarting with stat
+DEBUG 2018-04-03 06:45:31 registry.py registered 'bcrypt' handler: <class 'passlib.handlers.bcrypt.bcrypt'>
+DEBUG 2018-04-03 06:45:31 registry.py registered 'des_crypt' handler: <class 'passlib.handlers.des_crypt.des_crypt'>
+DEBUG 2018-04-03 06:45:31 registry.py registered 'pbkdf2_sha256' handler: <class 'passlib.handlers.pbkdf2.pbkdf2_sha256'>
+DEBUG 2018-04-03 06:45:31 registry.py registered 'pbkdf2_sha512' handler: <class 'passlib.handlers.pbkdf2.pbkdf2_sha512'>
+DEBUG 2018-04-03 06:45:31 registry.py registered 'sha256_crypt' handler: <class 'passlib.handlers.sha2_crypt.sha256_crypt'>
+DEBUG 2018-04-03 06:45:31 registry.py registered 'sha512_crypt' handler: <class 'passlib.handlers.sha2_crypt.sha512_crypt'>
+DEBUG 2018-04-03 06:45:31 registry.py registered 'plaintext' handler: <class 'passlib.handlers.misc.plaintext'>
+DEBUG 2018-04-03 06:45:31 registry.py registered 'hex_md5' handler: <class 'passlib.handlers.digests.hex_md5'>
+WARNING: 2018-04-03 06:45:31 _internal.py  * Debugger is active!
+NOTICE: 2018-04-03 06:45:31 _internal.py  * Debugger PIN: 101-161-083
+NOTICE: 2018-04-03 06:45:38 _internal.py 172.17.0.1 - - [03/Apr/2018 06:45:38] "POST /api/login HTTP/1.1" 500 -
+NOTICE: 2018-04-03 06:47:33 _internal.py  * Detected change in '/root/work/google/scanner/penework/app/views.py', reloading
+NOTICE: 2018-04-03 06:47:34 _internal.py  * Restarting with stat
+DEBUG 2018-04-03 06:47:45 registry.py registered 'bcrypt' handler: <class 'passlib.handlers.bcrypt.bcrypt'>
+DEBUG 2018-04-03 06:47:45 registry.py registered 'des_crypt' handler: <class 'passlib.handlers.des_crypt.des_crypt'>
+DEBUG 2018-04-03 06:47:45 registry.py registered 'pbkdf2_sha256' handler: <class 'passlib.handlers.pbkdf2.pbkdf2_sha256'>
+DEBUG 2018-04-03 06:47:45 registry.py registered 'pbkdf2_sha512' handler: <class 'passlib.handlers.pbkdf2.pbkdf2_sha512'>
+DEBUG 2018-04-03 06:47:45 registry.py registered 'sha256_crypt' handler: <class 'passlib.handlers.sha2_crypt.sha256_crypt'>
+DEBUG 2018-04-03 06:47:45 registry.py registered 'sha512_crypt' handler: <class 'passlib.handlers.sha2_crypt.sha512_crypt'>
+DEBUG 2018-04-03 06:47:45 registry.py registered 'plaintext' handler: <class 'passlib.handlers.misc.plaintext'>
+DEBUG 2018-04-03 06:47:45 registry.py registered 'hex_md5' handler: <class 'passlib.handlers.digests.hex_md5'>
+NOTICE: 2018-04-03 06:47:45 _internal.py  * Running on http://0.0.0.0:8070/ (Press CTRL+C to quit)
+NOTICE: 2018-04-03 06:47:45 _internal.py  * Restarting with stat
+DEBUG 2018-04-03 06:47:47 registry.py registered 'bcrypt' handler: <class 'passlib.handlers.bcrypt.bcrypt'>
+DEBUG 2018-04-03 06:47:47 registry.py registered 'des_crypt' handler: <class 'passlib.handlers.des_crypt.des_crypt'>
+DEBUG 2018-04-03 06:47:47 registry.py registered 'pbkdf2_sha256' handler: <class 'passlib.handlers.pbkdf2.pbkdf2_sha256'>
+DEBUG 2018-04-03 06:47:47 registry.py registered 'pbkdf2_sha512' handler: <class 'passlib.handlers.pbkdf2.pbkdf2_sha512'>
+DEBUG 2018-04-03 06:47:47 registry.py registered 'sha256_crypt' handler: <class 'passlib.handlers.sha2_crypt.sha256_crypt'>
+DEBUG 2018-04-03 06:47:47 registry.py registered 'sha512_crypt' handler: <class 'passlib.handlers.sha2_crypt.sha512_crypt'>
+DEBUG 2018-04-03 06:47:47 registry.py registered 'plaintext' handler: <class 'passlib.handlers.misc.plaintext'>
+DEBUG 2018-04-03 06:47:47 registry.py registered 'hex_md5' handler: <class 'passlib.handlers.digests.hex_md5'>
+WARNING: 2018-04-03 06:47:47 _internal.py  * Debugger is active!
+NOTICE: 2018-04-03 06:47:47 _internal.py  * Debugger PIN: 101-161-083
+ERROR: 2018-04-03 06:48:10 log.py Tried to save duplicate unique keys (E11000 duplicate key error collection: Assets.roles index: name_1 dup key: { : "User" })
+Traceback (most recent call last):
+  File "/root/work/google/scanner/penework/app/views.py", line 43, in create_user_role
+    user_role = user_datastore.create_role(name='User', description='Generic user role')
+  File "/usr/local/lib/python2.7/site-packages/flask_security/datastore.py", line 204, in create_role
+    return self.put(role)
+  File "/usr/local/lib/python2.7/site-packages/flask_security/datastore.py", line 43, in put
+    model.save()
+  File "/usr/local/lib/python2.7/site-packages/mongoengine/document.py", line 397, in save
+    raise NotUniqueError(message % six.text_type(err))
+NotUniqueError: Tried to save duplicate unique keys (E11000 duplicate key error collection: Assets.roles index: name_1 dup key: { : "User" })
+NOTICE: 2018-04-03 06:48:11 _internal.py 172.17.0.1 - - [03/Apr/2018 06:48:11] "POST /api/login HTTP/1.1" 500 -
+NOTICE: 2018-04-03 06:48:34 _internal.py  * Detected change in '/root/work/google/scanner/penework/app/views.py', reloading
+NOTICE: 2018-04-03 06:48:34 _internal.py  * Restarting with stat
+DEBUG 2018-04-03 06:48:35 registry.py registered 'bcrypt' handler: <class 'passlib.handlers.bcrypt.bcrypt'>
+DEBUG 2018-04-03 06:48:35 registry.py registered 'des_crypt' handler: <class 'passlib.handlers.des_crypt.des_crypt'>
+DEBUG 2018-04-03 06:48:35 registry.py registered 'pbkdf2_sha256' handler: <class 'passlib.handlers.pbkdf2.pbkdf2_sha256'>
+DEBUG 2018-04-03 06:48:35 registry.py registered 'pbkdf2_sha512' handler: <class 'passlib.handlers.pbkdf2.pbkdf2_sha512'>
+DEBUG 2018-04-03 06:48:35 registry.py registered 'sha256_crypt' handler: <class 'passlib.handlers.sha2_crypt.sha256_crypt'>
+DEBUG 2018-04-03 06:48:35 registry.py registered 'sha512_crypt' handler: <class 'passlib.handlers.sha2_crypt.sha512_crypt'>
+DEBUG 2018-04-03 06:48:35 registry.py registered 'plaintext' handler: <class 'passlib.handlers.misc.plaintext'>
+DEBUG 2018-04-03 06:48:35 registry.py registered 'hex_md5' handler: <class 'passlib.handlers.digests.hex_md5'>
+WARNING: 2018-04-03 06:48:35 _internal.py  * Debugger is active!
+NOTICE: 2018-04-03 06:48:35 _internal.py  * Debugger PIN: 101-161-083
+ERROR: 2018-04-03 06:48:43 log.py Tried to save duplicate unique keys (E11000 duplicate key error collection: Assets.roles index: name_1 dup key: { : "User" })
+Traceback (most recent call last):
+  File "/root/work/google/scanner/penework/app/views.py", line 43, in create_user_role
+    user_role = user_datastore.create_role(name='User', description='Generic user role')
+  File "/usr/local/lib/python2.7/site-packages/flask_security/datastore.py", line 204, in create_role
+    return self.put(role)
+  File "/usr/local/lib/python2.7/site-packages/flask_security/datastore.py", line 43, in put
+    model.save()
+  File "/usr/local/lib/python2.7/site-packages/mongoengine/document.py", line 397, in save
+    raise NotUniqueError(message % six.text_type(err))
+NotUniqueError: Tried to save duplicate unique keys (E11000 duplicate key error collection: Assets.roles index: name_1 dup key: { : "User" })
+NOTICE: 2018-04-03 06:48:43 _internal.py 172.17.0.1 - - [03/Apr/2018 06:48:43] "POST /api/login HTTP/1.1" 500 -
+NOTICE: 2018-04-03 06:48:54 _internal.py  * Detected change in '/root/work/google/scanner/penework/app/views.py', reloading
+NOTICE: 2018-04-03 06:48:55 _internal.py  * Restarting with stat
+DEBUG 2018-04-03 06:48:56 registry.py registered 'bcrypt' handler: <class 'passlib.handlers.bcrypt.bcrypt'>
+DEBUG 2018-04-03 06:48:56 registry.py registered 'des_crypt' handler: <class 'passlib.handlers.des_crypt.des_crypt'>
+DEBUG 2018-04-03 06:48:56 registry.py registered 'pbkdf2_sha256' handler: <class 'passlib.handlers.pbkdf2.pbkdf2_sha256'>
+DEBUG 2018-04-03 06:48:56 registry.py registered 'pbkdf2_sha512' handler: <class 'passlib.handlers.pbkdf2.pbkdf2_sha512'>
+DEBUG 2018-04-03 06:48:56 registry.py registered 'sha256_crypt' handler: <class 'passlib.handlers.sha2_crypt.sha256_crypt'>
+DEBUG 2018-04-03 06:48:56 registry.py registered 'sha512_crypt' handler: <class 'passlib.handlers.sha2_crypt.sha512_crypt'>
+DEBUG 2018-04-03 06:48:56 registry.py registered 'plaintext' handler: <class 'passlib.handlers.misc.plaintext'>
+DEBUG 2018-04-03 06:48:56 registry.py registered 'hex_md5' handler: <class 'passlib.handlers.digests.hex_md5'>
+WARNING: 2018-04-03 06:48:56 _internal.py  * Debugger is active!
+NOTICE: 2018-04-03 06:48:56 _internal.py  * Debugger PIN: 101-161-083
+ERROR: 2018-04-03 06:48:58 log.py Tried to save duplicate unique keys (E11000 duplicate key error collection: Assets.roles index: name_1 dup key: { : "User" })
+Traceback (most recent call last):
+  File "/root/work/google/scanner/penework/app/views.py", line 43, in create_user_role
+    user_role = user_datastore.create_role(name='User', description='Generic user role')
+  File "/usr/local/lib/python2.7/site-packages/flask_security/datastore.py", line 204, in create_role
+    return self.put(role)
+  File "/usr/local/lib/python2.7/site-packages/flask_security/datastore.py", line 43, in put
+    model.save()
+  File "/usr/local/lib/python2.7/site-packages/mongoengine/document.py", line 397, in save
+    raise NotUniqueError(message % six.text_type(err))
+NotUniqueError: Tried to save duplicate unique keys (E11000 duplicate key error collection: Assets.roles index: name_1 dup key: { : "User" })
+NOTICE: 2018-04-03 06:48:59 _internal.py 172.17.0.1 - - [03/Apr/2018 06:48:59] "POST /api/login HTTP/1.1" 200 -
+NOTICE: 2018-04-03 06:50:51 _internal.py  * Detected change in '/root/work/google/scanner/penework/app/views.py', reloading
+NOTICE: 2018-04-03 06:50:51 _internal.py  * Restarting with stat
+DEBUG 2018-04-03 06:50:52 registry.py registered 'bcrypt' handler: <class 'passlib.handlers.bcrypt.bcrypt'>
+DEBUG 2018-04-03 06:50:52 registry.py registered 'des_crypt' handler: <class 'passlib.handlers.des_crypt.des_crypt'>
+DEBUG 2018-04-03 06:50:52 registry.py registered 'pbkdf2_sha256' handler: <class 'passlib.handlers.pbkdf2.pbkdf2_sha256'>
+DEBUG 2018-04-03 06:50:52 registry.py registered 'pbkdf2_sha512' handler: <class 'passlib.handlers.pbkdf2.pbkdf2_sha512'>
+DEBUG 2018-04-03 06:50:52 registry.py registered 'sha256_crypt' handler: <class 'passlib.handlers.sha2_crypt.sha256_crypt'>
+DEBUG 2018-04-03 06:50:52 registry.py registered 'sha512_crypt' handler: <class 'passlib.handlers.sha2_crypt.sha512_crypt'>
+DEBUG 2018-04-03 06:50:52 registry.py registered 'plaintext' handler: <class 'passlib.handlers.misc.plaintext'>
+DEBUG 2018-04-03 06:50:52 registry.py registered 'hex_md5' handler: <class 'passlib.handlers.digests.hex_md5'>
+WARNING: 2018-04-03 06:50:52 _internal.py  * Debugger is active!
+NOTICE: 2018-04-03 06:50:52 _internal.py  * Debugger PIN: 101-161-083
+NOTICE: 2018-04-03 06:51:24 _internal.py  * Detected change in '/root/work/google/scanner/penework/app/views.py', reloading
+NOTICE: 2018-04-03 06:51:25 _internal.py  * Restarting with stat
+DEBUG 2018-04-03 06:53:12 registry.py registered 'bcrypt' handler: <class 'passlib.handlers.bcrypt.bcrypt'>
+DEBUG 2018-04-03 06:53:12 registry.py registered 'des_crypt' handler: <class 'passlib.handlers.des_crypt.des_crypt'>
+DEBUG 2018-04-03 06:53:12 registry.py registered 'pbkdf2_sha256' handler: <class 'passlib.handlers.pbkdf2.pbkdf2_sha256'>
+DEBUG 2018-04-03 06:53:12 registry.py registered 'pbkdf2_sha512' handler: <class 'passlib.handlers.pbkdf2.pbkdf2_sha512'>
+DEBUG 2018-04-03 06:53:12 registry.py registered 'sha256_crypt' handler: <class 'passlib.handlers.sha2_crypt.sha256_crypt'>
+DEBUG 2018-04-03 06:53:12 registry.py registered 'sha512_crypt' handler: <class 'passlib.handlers.sha2_crypt.sha512_crypt'>
+DEBUG 2018-04-03 06:53:12 registry.py registered 'plaintext' handler: <class 'passlib.handlers.misc.plaintext'>
+DEBUG 2018-04-03 06:53:12 registry.py registered 'hex_md5' handler: <class 'passlib.handlers.digests.hex_md5'>
+NOTICE: 2018-04-03 06:53:12 _internal.py  * Running on http://0.0.0.0:8070/ (Press CTRL+C to quit)
+NOTICE: 2018-04-03 06:53:12 _internal.py  * Restarting with stat
+DEBUG 2018-04-03 06:53:13 registry.py registered 'bcrypt' handler: <class 'passlib.handlers.bcrypt.bcrypt'>
+DEBUG 2018-04-03 06:53:13 registry.py registered 'des_crypt' handler: <class 'passlib.handlers.des_crypt.des_crypt'>
+DEBUG 2018-04-03 06:53:13 registry.py registered 'pbkdf2_sha256' handler: <class 'passlib.handlers.pbkdf2.pbkdf2_sha256'>
+DEBUG 2018-04-03 06:53:13 registry.py registered 'pbkdf2_sha512' handler: <class 'passlib.handlers.pbkdf2.pbkdf2_sha512'>
+DEBUG 2018-04-03 06:53:13 registry.py registered 'sha256_crypt' handler: <class 'passlib.handlers.sha2_crypt.sha256_crypt'>
+DEBUG 2018-04-03 06:53:13 registry.py registered 'sha512_crypt' handler: <class 'passlib.handlers.sha2_crypt.sha512_crypt'>
+DEBUG 2018-04-03 06:53:13 registry.py registered 'plaintext' handler: <class 'passlib.handlers.misc.plaintext'>
+DEBUG 2018-04-03 06:53:13 registry.py registered 'hex_md5' handler: <class 'passlib.handlers.digests.hex_md5'>
+WARNING: 2018-04-03 06:53:13 _internal.py  * Debugger is active!
+NOTICE: 2018-04-03 06:53:13 _internal.py  * Debugger PIN: 101-161-083
+ERROR: 2018-04-03 06:53:23 log.py Tried to save duplicate unique keys (E11000 duplicate key error collection: Assets.roles index: name_1 dup key: { : "User" })
+Traceback (most recent call last):
+  File "/root/work/google/scanner/penework/app/views.py", line 43, in create_user_role
+    user_role = user_datastore.create_role(name='User', description='Generic user role')
+  File "/usr/local/lib/python2.7/site-packages/flask_security/datastore.py", line 204, in create_role
+    return self.put(role)
+  File "/usr/local/lib/python2.7/site-packages/flask_security/datastore.py", line 43, in put
+    model.save()
+  File "/usr/local/lib/python2.7/site-packages/mongoengine/document.py", line 397, in save
+    raise NotUniqueError(message % six.text_type(err))
+NotUniqueError: Tried to save duplicate unique keys (E11000 duplicate key error collection: Assets.roles index: name_1 dup key: { : "User" })
+NOTICE: 2018-04-03 06:53:23 _internal.py 172.17.0.1 - - [03/Apr/2018 06:53:23] "POST /api/login HTTP/1.1" 200 -
+NOTICE: 2018-04-03 06:53:30 _internal.py 172.17.0.1 - - [03/Apr/2018 06:53:30] "POST /api/login HTTP/1.1" 200 -
+NOTICE: 2018-04-03 06:53:31 _internal.py 172.17.0.1 - - [03/Apr/2018 06:53:31] "POST /api/login HTTP/1.1" 200 -
+NOTICE: 2018-04-03 06:53:33 _internal.py 172.17.0.1 - - [03/Apr/2018 06:53:33] "POST /api/login HTTP/1.1" 200 -
+NOTICE: 2018-04-03 06:53:35 _internal.py 172.17.0.1 - - [03/Apr/2018 06:53:35] "POST /api/login HTTP/1.1" 200 -
+NOTICE: 2018-04-03 06:53:36 _internal.py 172.17.0.1 - - [03/Apr/2018 06:53:36] "POST /api/login HTTP/1.1" 200 -
+NOTICE: 2018-04-03 06:53:37 _internal.py 172.17.0.1 - - [03/Apr/2018 06:53:37] "POST /api/login HTTP/1.1" 200 -
+NOTICE: 2018-04-03 06:53:38 _internal.py 172.17.0.1 - - [03/Apr/2018 06:53:38] "POST /api/login HTTP/1.1" 200 -
+NOTICE: 2018-04-03 06:53:39 _internal.py 172.17.0.1 - - [03/Apr/2018 06:53:39] "POST /api/login HTTP/1.1" 200 -
+NOTICE: 2018-04-03 06:53:40 _internal.py 172.17.0.1 - - [03/Apr/2018 06:53:40] "POST /api/login HTTP/1.1" 200 -
+NOTICE: 2018-04-03 06:53:41 _internal.py 172.17.0.1 - - [03/Apr/2018 06:53:41] "POST /api/login HTTP/1.1" 200 -
+NOTICE: 2018-04-03 06:53:42 _internal.py 172.17.0.1 - - [03/Apr/2018 06:53:42] "POST /api/login HTTP/1.1" 200 -
+NOTICE: 2018-04-03 06:53:43 _internal.py 172.17.0.1 - - [03/Apr/2018 06:53:43] "POST /api/login HTTP/1.1" 200 -
+NOTICE: 2018-04-03 06:53:55 _internal.py  * Detected change in '/root/work/google/scanner/penework/app/views.py', reloading
+NOTICE: 2018-04-03 06:53:55 _internal.py  * Restarting with stat
+DEBUG 2018-04-03 06:53:56 registry.py registered 'bcrypt' handler: <class 'passlib.handlers.bcrypt.bcrypt'>
+DEBUG 2018-04-03 06:53:56 registry.py registered 'des_crypt' handler: <class 'passlib.handlers.des_crypt.des_crypt'>
+DEBUG 2018-04-03 06:53:56 registry.py registered 'pbkdf2_sha256' handler: <class 'passlib.handlers.pbkdf2.pbkdf2_sha256'>
+DEBUG 2018-04-03 06:53:56 registry.py registered 'pbkdf2_sha512' handler: <class 'passlib.handlers.pbkdf2.pbkdf2_sha512'>
+DEBUG 2018-04-03 06:53:56 registry.py registered 'sha256_crypt' handler: <class 'passlib.handlers.sha2_crypt.sha256_crypt'>
+DEBUG 2018-04-03 06:53:56 registry.py registered 'sha512_crypt' handler: <class 'passlib.handlers.sha2_crypt.sha512_crypt'>
+DEBUG 2018-04-03 06:53:56 registry.py registered 'plaintext' handler: <class 'passlib.handlers.misc.plaintext'>
+DEBUG 2018-04-03 06:53:56 registry.py registered 'hex_md5' handler: <class 'passlib.handlers.digests.hex_md5'>
+WARNING: 2018-04-03 06:53:56 _internal.py  * Debugger is active!
+NOTICE: 2018-04-03 06:53:56 _internal.py  * Debugger PIN: 101-161-083
+DEBUG 2018-04-03 08:40:15 registry.py registered 'bcrypt' handler: <class 'passlib.handlers.bcrypt.bcrypt'>
+DEBUG 2018-04-03 08:40:15 registry.py registered 'des_crypt' handler: <class 'passlib.handlers.des_crypt.des_crypt'>
+DEBUG 2018-04-03 08:40:15 registry.py registered 'pbkdf2_sha256' handler: <class 'passlib.handlers.pbkdf2.pbkdf2_sha256'>
+DEBUG 2018-04-03 08:40:15 registry.py registered 'pbkdf2_sha512' handler: <class 'passlib.handlers.pbkdf2.pbkdf2_sha512'>
+DEBUG 2018-04-03 08:40:15 registry.py registered 'sha256_crypt' handler: <class 'passlib.handlers.sha2_crypt.sha256_crypt'>
+DEBUG 2018-04-03 08:40:15 registry.py registered 'sha512_crypt' handler: <class 'passlib.handlers.sha2_crypt.sha512_crypt'>
+DEBUG 2018-04-03 08:40:15 registry.py registered 'plaintext' handler: <class 'passlib.handlers.misc.plaintext'>
+DEBUG 2018-04-03 08:40:15 registry.py registered 'hex_md5' handler: <class 'passlib.handlers.digests.hex_md5'>
+NOTICE: 2018-04-03 08:40:15 _internal.py  * Running on http://0.0.0.0:8070/ (Press CTRL+C to quit)
+NOTICE: 2018-04-03 08:40:15 _internal.py  * Restarting with stat
+DEBUG 2018-04-03 08:40:16 registry.py registered 'bcrypt' handler: <class 'passlib.handlers.bcrypt.bcrypt'>
+DEBUG 2018-04-03 08:40:16 registry.py registered 'des_crypt' handler: <class 'passlib.handlers.des_crypt.des_crypt'>
+DEBUG 2018-04-03 08:40:16 registry.py registered 'pbkdf2_sha256' handler: <class 'passlib.handlers.pbkdf2.pbkdf2_sha256'>
+DEBUG 2018-04-03 08:40:16 registry.py registered 'pbkdf2_sha512' handler: <class 'passlib.handlers.pbkdf2.pbkdf2_sha512'>
+DEBUG 2018-04-03 08:40:16 registry.py registered 'sha256_crypt' handler: <class 'passlib.handlers.sha2_crypt.sha256_crypt'>
+DEBUG 2018-04-03 08:40:16 registry.py registered 'sha512_crypt' handler: <class 'passlib.handlers.sha2_crypt.sha512_crypt'>
+DEBUG 2018-04-03 08:40:16 registry.py registered 'plaintext' handler: <class 'passlib.handlers.misc.plaintext'>
+DEBUG 2018-04-03 08:40:16 registry.py registered 'hex_md5' handler: <class 'passlib.handlers.digests.hex_md5'>
+WARNING: 2018-04-03 08:40:16 _internal.py  * Debugger is active!
+NOTICE: 2018-04-03 08:40:16 _internal.py  * Debugger PIN: 330-151-543
+NOTICE: 2018-04-03 08:53:38 _internal.py  * Detected change in '/root/work/google/scanner/penework/app/views.py', reloading
+NOTICE: 2018-04-03 08:53:38 _internal.py  * Restarting with stat
+DEBUG 2018-04-03 08:53:40 registry.py registered 'bcrypt' handler: <class 'passlib.handlers.bcrypt.bcrypt'>
+DEBUG 2018-04-03 08:53:40 registry.py registered 'des_crypt' handler: <class 'passlib.handlers.des_crypt.des_crypt'>
+DEBUG 2018-04-03 08:53:40 registry.py registered 'pbkdf2_sha256' handler: <class 'passlib.handlers.pbkdf2.pbkdf2_sha256'>
+DEBUG 2018-04-03 08:53:40 registry.py registered 'pbkdf2_sha512' handler: <class 'passlib.handlers.pbkdf2.pbkdf2_sha512'>
+DEBUG 2018-04-03 08:53:40 registry.py registered 'sha256_crypt' handler: <class 'passlib.handlers.sha2_crypt.sha256_crypt'>
+DEBUG 2018-04-03 08:53:40 registry.py registered 'sha512_crypt' handler: <class 'passlib.handlers.sha2_crypt.sha512_crypt'>
+DEBUG 2018-04-03 08:53:40 registry.py registered 'plaintext' handler: <class 'passlib.handlers.misc.plaintext'>
+DEBUG 2018-04-03 08:53:40 registry.py registered 'hex_md5' handler: <class 'passlib.handlers.digests.hex_md5'>
+WARNING: 2018-04-03 08:53:40 _internal.py  * Debugger is active!
+NOTICE: 2018-04-03 08:53:40 _internal.py  * Debugger PIN: 330-151-543
+NOTICE: 2018-04-03 08:53:43 _internal.py  * Detected change in '/root/work/google/scanner/penework/app/views.py', reloading
+NOTICE: 2018-04-03 08:53:44 _internal.py  * Restarting with stat
+DEBUG 2018-04-03 08:53:45 registry.py registered 'bcrypt' handler: <class 'passlib.handlers.bcrypt.bcrypt'>
+DEBUG 2018-04-03 08:53:45 registry.py registered 'des_crypt' handler: <class 'passlib.handlers.des_crypt.des_crypt'>
+DEBUG 2018-04-03 08:53:45 registry.py registered 'pbkdf2_sha256' handler: <class 'passlib.handlers.pbkdf2.pbkdf2_sha256'>
+DEBUG 2018-04-03 08:53:45 registry.py registered 'pbkdf2_sha512' handler: <class 'passlib.handlers.pbkdf2.pbkdf2_sha512'>
+DEBUG 2018-04-03 08:53:45 registry.py registered 'sha256_crypt' handler: <class 'passlib.handlers.sha2_crypt.sha256_crypt'>
+DEBUG 2018-04-03 08:53:45 registry.py registered 'sha512_crypt' handler: <class 'passlib.handlers.sha2_crypt.sha512_crypt'>
+DEBUG 2018-04-03 08:53:45 registry.py registered 'plaintext' handler: <class 'passlib.handlers.misc.plaintext'>
+DEBUG 2018-04-03 08:53:45 registry.py registered 'hex_md5' handler: <class 'passlib.handlers.digests.hex_md5'>
+WARNING: 2018-04-03 08:53:45 _internal.py  * Debugger is active!
+NOTICE: 2018-04-03 08:53:45 _internal.py  * Debugger PIN: 330-151-543
+NOTICE: 2018-04-03 08:53:48 _internal.py  * Detected change in '/root/work/google/scanner/penework/app/views.py', reloading
+NOTICE: 2018-04-03 08:53:48 _internal.py  * Restarting with stat
+DEBUG 2018-04-03 08:53:50 registry.py registered 'bcrypt' handler: <class 'passlib.handlers.bcrypt.bcrypt'>
+DEBUG 2018-04-03 08:53:50 registry.py registered 'des_crypt' handler: <class 'passlib.handlers.des_crypt.des_crypt'>
+DEBUG 2018-04-03 08:53:50 registry.py registered 'pbkdf2_sha256' handler: <class 'passlib.handlers.pbkdf2.pbkdf2_sha256'>
+DEBUG 2018-04-03 08:53:50 registry.py registered 'pbkdf2_sha512' handler: <class 'passlib.handlers.pbkdf2.pbkdf2_sha512'>
+DEBUG 2018-04-03 08:53:50 registry.py registered 'sha256_crypt' handler: <class 'passlib.handlers.sha2_crypt.sha256_crypt'>
+DEBUG 2018-04-03 08:53:50 registry.py registered 'sha512_crypt' handler: <class 'passlib.handlers.sha2_crypt.sha512_crypt'>
+DEBUG 2018-04-03 08:53:50 registry.py registered 'plaintext' handler: <class 'passlib.handlers.misc.plaintext'>
+DEBUG 2018-04-03 08:53:50 registry.py registered 'hex_md5' handler: <class 'passlib.handlers.digests.hex_md5'>
+WARNING: 2018-04-03 08:53:50 _internal.py  * Debugger is active!
+NOTICE: 2018-04-03 08:53:50 _internal.py  * Debugger PIN: 330-151-543
