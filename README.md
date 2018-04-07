@@ -77,6 +77,9 @@ def auth_token(func):
     return wrapper
 ```
 
+需要利用任务队列来管理新建项目的创建，当有masscan时，只是录入项目的信息，并更新项目的状态为未开始。但没有项目正在扫描时，开启masscan扫描.为了缓解服务器的压力，每次只是运行固定个数的项目。
+
+任务队列，利用celery，broker使用redis
 
 ### 数据库设计
 

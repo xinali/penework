@@ -26,9 +26,9 @@
                       详情<i class="el-icon-arrow-down el-icon--right"></i>
                 </el-button>
     						<el-dropdown-menu slot="dropdown">
-    							<el-dropdown-item>端口信息</el-dropdown-item>
-    							<el-dropdown-item>子域名信息</el-dropdown-item>
-    							<el-dropdown-item>子目录信息</el-dropdown-item>
+    							<el-dropdown-item @click="getPortInfo(scope.$index, scope.row)">端口信息</el-dropdown-item>
+    							<el-dropdown-item @click="getSubDomain(scope.$index, scope.row)">子域名信息</el-dropdown-item>
+    							<!-- <el-dropdown-item @click="getDirs>子目录信息</el-dropdown-item> -->
     						</el-dropdown-menu>
     					</el-dropdown>
               <el-button size="small" @click="handleEdit(scope.$index, scope.row)">编辑</el-button>

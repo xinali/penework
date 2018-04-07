@@ -21,7 +21,6 @@ from lib.core.db import mongo
 
 # some init 
 # register logger/init db and so on
-initdb()
 
 db = MongoEngine()
 app = Flask(__name__)
@@ -93,4 +92,75 @@ def Login():
 @login_required
 @auth_token
 def ProjectList():
-    projects = mongo.Projects.find()
+    try:
+        projects = []
+        for project in mongo[Config.MONGODB_C_PROJECTS].find():
+            projects.append(project)
+        return jsonify({'code':2000, 'rdata': projects})
+    except Exception as ex:
+        logger.exception(ex.message)
+        return jsonify({'code': 6000, 'message': 'Get project list error!'})
+
+
+@app.route('/api/project/add', methods=['post'])
+@login_required
+@auth_token 
+def ProjectAdd():
+    try:
+        pid = request.data['pid']
+        running_pro = mongo[Config.MONGODB_C_PROJECTS].find({'status': 'running'}).count()
+        if running_pro > Config.MSCAN_RUNNING:
+            # don't start masscan
+            pass
+
+        mongo[Config.MONGODB_C_PROJECTS].insert(request.data)
+    except Exception as ex:
+        logger.exception(ex.message)
+        return jsonify({'code': 6000, 'message': 'Add project error'})
+    
+
+@app.route('/api/project/delete', methods=['post'])
+@login_required
+@auth_token 
+def ProjectDelete():
+    # delete project if not running
+    # stop then delete if project is running
+    try:
+        pass
+    except Exception as ex:
+        logger.exception(ex.message)
+
+
+@app.route('/api/project/update', methods=['post'])
+@login_required
+@auth_token 
+def ProjectUpdate():
+    try:
+        pass
+    except Exception as ex:
+        logger.exception(ex.message)
+
+
+@app.route('/api/portinfo', method=['pid'])
+@login_required
+@auth_token
+def PortInfo():
+    try: 
+        infos = []
+        pid = request.data['pid']
+        for info in mongo[Config.MONGODB_C_NSCAN].find({'pid':pid}):
+            infos.append(info)
+        return jsonify({'code': 2000, 'rdata': infos})
+    except Exception as ex:
+        logger.exception(ex.message)
+        return jsonify({'code': 6000, 'message': 'Get ports info error!'})
+
+
+@app.route('/api/subdomain')
+@login_required
+@auth_token
+def SubDomain():
+    try:
+        pass
+    except Exception as ex:
+        logger.exception(ex.message)

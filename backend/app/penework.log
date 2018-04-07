@@ -275,3 +275,99 @@ DEBUG 2018-04-03 08:53:50 registry.py registered 'plaintext' handler: <class 'pa
 DEBUG 2018-04-03 08:53:50 registry.py registered 'hex_md5' handler: <class 'passlib.handlers.digests.hex_md5'>
 WARNING: 2018-04-03 08:53:50 _internal.py  * Debugger is active!
 NOTICE: 2018-04-03 08:53:50 _internal.py  * Debugger PIN: 330-151-543
+DEBUG 2018-04-04 05:19:50 registry.py registered 'bcrypt' handler: <class 'passlib.handlers.bcrypt.bcrypt'>
+DEBUG 2018-04-04 05:19:50 registry.py registered 'des_crypt' handler: <class 'passlib.handlers.des_crypt.des_crypt'>
+DEBUG 2018-04-04 05:19:50 registry.py registered 'pbkdf2_sha256' handler: <class 'passlib.handlers.pbkdf2.pbkdf2_sha256'>
+DEBUG 2018-04-04 05:19:50 registry.py registered 'pbkdf2_sha512' handler: <class 'passlib.handlers.pbkdf2.pbkdf2_sha512'>
+DEBUG 2018-04-04 05:19:50 registry.py registered 'sha256_crypt' handler: <class 'passlib.handlers.sha2_crypt.sha256_crypt'>
+DEBUG 2018-04-04 05:19:50 registry.py registered 'sha512_crypt' handler: <class 'passlib.handlers.sha2_crypt.sha512_crypt'>
+DEBUG 2018-04-04 05:19:50 registry.py registered 'plaintext' handler: <class 'passlib.handlers.misc.plaintext'>
+DEBUG 2018-04-04 05:19:50 registry.py registered 'hex_md5' handler: <class 'passlib.handlers.digests.hex_md5'>
+NOTICE: 2018-04-04 05:19:50 _internal.py  * Running on http://0.0.0.0:8070/ (Press CTRL+C to quit)
+NOTICE: 2018-04-04 05:19:50 _internal.py  * Restarting with stat
+DEBUG 2018-04-04 05:19:52 registry.py registered 'bcrypt' handler: <class 'passlib.handlers.bcrypt.bcrypt'>
+DEBUG 2018-04-04 05:19:52 registry.py registered 'des_crypt' handler: <class 'passlib.handlers.des_crypt.des_crypt'>
+DEBUG 2018-04-04 05:19:52 registry.py registered 'pbkdf2_sha256' handler: <class 'passlib.handlers.pbkdf2.pbkdf2_sha256'>
+DEBUG 2018-04-04 05:19:52 registry.py registered 'pbkdf2_sha512' handler: <class 'passlib.handlers.pbkdf2.pbkdf2_sha512'>
+DEBUG 2018-04-04 05:19:52 registry.py registered 'sha256_crypt' handler: <class 'passlib.handlers.sha2_crypt.sha256_crypt'>
+DEBUG 2018-04-04 05:19:52 registry.py registered 'sha512_crypt' handler: <class 'passlib.handlers.sha2_crypt.sha512_crypt'>
+DEBUG 2018-04-04 05:19:52 registry.py registered 'plaintext' handler: <class 'passlib.handlers.misc.plaintext'>
+DEBUG 2018-04-04 05:19:52 registry.py registered 'hex_md5' handler: <class 'passlib.handlers.digests.hex_md5'>
+WARNING: 2018-04-04 05:19:52 _internal.py  * Debugger is active!
+NOTICE: 2018-04-04 05:19:52 _internal.py  * Debugger PIN: 330-151-543
+NOTICE: 2018-04-04 05:20:42 _internal.py  * Detected change in '/root/work/google/penework/backend/app/lib/core/config.py', reloading
+NOTICE: 2018-04-04 05:20:42 _internal.py  * Restarting with stat
+DEBUG 2018-04-04 05:20:44 registry.py registered 'bcrypt' handler: <class 'passlib.handlers.bcrypt.bcrypt'>
+DEBUG 2018-04-04 05:20:44 registry.py registered 'des_crypt' handler: <class 'passlib.handlers.des_crypt.des_crypt'>
+DEBUG 2018-04-04 05:20:44 registry.py registered 'pbkdf2_sha256' handler: <class 'passlib.handlers.pbkdf2.pbkdf2_sha256'>
+DEBUG 2018-04-04 05:20:44 registry.py registered 'pbkdf2_sha512' handler: <class 'passlib.handlers.pbkdf2.pbkdf2_sha512'>
+DEBUG 2018-04-04 05:20:44 registry.py registered 'sha256_crypt' handler: <class 'passlib.handlers.sha2_crypt.sha256_crypt'>
+DEBUG 2018-04-04 05:20:44 registry.py registered 'sha512_crypt' handler: <class 'passlib.handlers.sha2_crypt.sha512_crypt'>
+DEBUG 2018-04-04 05:20:44 registry.py registered 'plaintext' handler: <class 'passlib.handlers.misc.plaintext'>
+DEBUG 2018-04-04 05:20:44 registry.py registered 'hex_md5' handler: <class 'passlib.handlers.digests.hex_md5'>
+WARNING: 2018-04-04 05:20:44 _internal.py  * Debugger is active!
+NOTICE: 2018-04-04 05:20:44 _internal.py  * Debugger PIN: 330-151-543
+DEBUG 2018-04-04 05:20:59 registry.py registered 'bcrypt' handler: <class 'passlib.handlers.bcrypt.bcrypt'>
+DEBUG 2018-04-04 05:20:59 registry.py registered 'des_crypt' handler: <class 'passlib.handlers.des_crypt.des_crypt'>
+DEBUG 2018-04-04 05:20:59 registry.py registered 'pbkdf2_sha256' handler: <class 'passlib.handlers.pbkdf2.pbkdf2_sha256'>
+DEBUG 2018-04-04 05:20:59 registry.py registered 'pbkdf2_sha512' handler: <class 'passlib.handlers.pbkdf2.pbkdf2_sha512'>
+DEBUG 2018-04-04 05:20:59 registry.py registered 'sha256_crypt' handler: <class 'passlib.handlers.sha2_crypt.sha256_crypt'>
+DEBUG 2018-04-04 05:20:59 registry.py registered 'sha512_crypt' handler: <class 'passlib.handlers.sha2_crypt.sha512_crypt'>
+DEBUG 2018-04-04 05:20:59 registry.py registered 'plaintext' handler: <class 'passlib.handlers.misc.plaintext'>
+DEBUG 2018-04-04 05:20:59 registry.py registered 'hex_md5' handler: <class 'passlib.handlers.digests.hex_md5'>
+NOTICE: 2018-04-04 05:20:59 _internal.py  * Running on http://0.0.0.0:8070/ (Press CTRL+C to quit)
+NOTICE: 2018-04-04 05:20:59 _internal.py  * Restarting with stat
+DEBUG 2018-04-04 05:21:00 registry.py registered 'bcrypt' handler: <class 'passlib.handlers.bcrypt.bcrypt'>
+DEBUG 2018-04-04 05:21:00 registry.py registered 'des_crypt' handler: <class 'passlib.handlers.des_crypt.des_crypt'>
+DEBUG 2018-04-04 05:21:00 registry.py registered 'pbkdf2_sha256' handler: <class 'passlib.handlers.pbkdf2.pbkdf2_sha256'>
+DEBUG 2018-04-04 05:21:00 registry.py registered 'pbkdf2_sha512' handler: <class 'passlib.handlers.pbkdf2.pbkdf2_sha512'>
+DEBUG 2018-04-04 05:21:00 registry.py registered 'sha256_crypt' handler: <class 'passlib.handlers.sha2_crypt.sha256_crypt'>
+DEBUG 2018-04-04 05:21:00 registry.py registered 'sha512_crypt' handler: <class 'passlib.handlers.sha2_crypt.sha512_crypt'>
+DEBUG 2018-04-04 05:21:00 registry.py registered 'plaintext' handler: <class 'passlib.handlers.misc.plaintext'>
+DEBUG 2018-04-04 05:21:00 registry.py registered 'hex_md5' handler: <class 'passlib.handlers.digests.hex_md5'>
+WARNING: 2018-04-04 05:21:00 _internal.py  * Debugger is active!
+NOTICE: 2018-04-04 05:21:00 _internal.py  * Debugger PIN: 330-151-543
+DEBUG 2018-04-04 05:23:30 registry.py registered 'bcrypt' handler: <class 'passlib.handlers.bcrypt.bcrypt'>
+DEBUG 2018-04-04 05:23:30 registry.py registered 'des_crypt' handler: <class 'passlib.handlers.des_crypt.des_crypt'>
+DEBUG 2018-04-04 05:23:30 registry.py registered 'pbkdf2_sha256' handler: <class 'passlib.handlers.pbkdf2.pbkdf2_sha256'>
+DEBUG 2018-04-04 05:23:30 registry.py registered 'pbkdf2_sha512' handler: <class 'passlib.handlers.pbkdf2.pbkdf2_sha512'>
+DEBUG 2018-04-04 05:23:30 registry.py registered 'sha256_crypt' handler: <class 'passlib.handlers.sha2_crypt.sha256_crypt'>
+DEBUG 2018-04-04 05:23:30 registry.py registered 'sha512_crypt' handler: <class 'passlib.handlers.sha2_crypt.sha512_crypt'>
+DEBUG 2018-04-04 05:23:30 registry.py registered 'plaintext' handler: <class 'passlib.handlers.misc.plaintext'>
+DEBUG 2018-04-04 05:23:30 registry.py registered 'hex_md5' handler: <class 'passlib.handlers.digests.hex_md5'>
+NOTICE: 2018-04-04 05:23:30 _internal.py  * Running on http://0.0.0.0:8070/ (Press CTRL+C to quit)
+NOTICE: 2018-04-04 05:23:30 _internal.py  * Restarting with stat
+DEBUG 2018-04-04 05:23:32 registry.py registered 'bcrypt' handler: <class 'passlib.handlers.bcrypt.bcrypt'>
+DEBUG 2018-04-04 05:23:32 registry.py registered 'des_crypt' handler: <class 'passlib.handlers.des_crypt.des_crypt'>
+DEBUG 2018-04-04 05:23:32 registry.py registered 'pbkdf2_sha256' handler: <class 'passlib.handlers.pbkdf2.pbkdf2_sha256'>
+DEBUG 2018-04-04 05:23:32 registry.py registered 'pbkdf2_sha512' handler: <class 'passlib.handlers.pbkdf2.pbkdf2_sha512'>
+DEBUG 2018-04-04 05:23:32 registry.py registered 'sha256_crypt' handler: <class 'passlib.handlers.sha2_crypt.sha256_crypt'>
+DEBUG 2018-04-04 05:23:32 registry.py registered 'sha512_crypt' handler: <class 'passlib.handlers.sha2_crypt.sha512_crypt'>
+DEBUG 2018-04-04 05:23:32 registry.py registered 'plaintext' handler: <class 'passlib.handlers.misc.plaintext'>
+DEBUG 2018-04-04 05:23:32 registry.py registered 'hex_md5' handler: <class 'passlib.handlers.digests.hex_md5'>
+WARNING: 2018-04-04 05:23:32 _internal.py  * Debugger is active!
+NOTICE: 2018-04-04 05:23:32 _internal.py  * Debugger PIN: 330-151-543
+NOTICE: 2018-04-04 05:24:23 _internal.py  * Detected change in '/root/work/google/penework/backend/app/lib/utils/init.py', reloading
+NOTICE: 2018-04-04 05:24:24 _internal.py  * Restarting with stat
+DEBUG 2018-04-04 05:24:53 registry.py registered 'bcrypt' handler: <class 'passlib.handlers.bcrypt.bcrypt'>
+DEBUG 2018-04-04 05:24:53 registry.py registered 'des_crypt' handler: <class 'passlib.handlers.des_crypt.des_crypt'>
+DEBUG 2018-04-04 05:24:53 registry.py registered 'pbkdf2_sha256' handler: <class 'passlib.handlers.pbkdf2.pbkdf2_sha256'>
+DEBUG 2018-04-04 05:24:53 registry.py registered 'pbkdf2_sha512' handler: <class 'passlib.handlers.pbkdf2.pbkdf2_sha512'>
+DEBUG 2018-04-04 05:24:53 registry.py registered 'sha256_crypt' handler: <class 'passlib.handlers.sha2_crypt.sha256_crypt'>
+DEBUG 2018-04-04 05:24:53 registry.py registered 'sha512_crypt' handler: <class 'passlib.handlers.sha2_crypt.sha512_crypt'>
+DEBUG 2018-04-04 05:24:53 registry.py registered 'plaintext' handler: <class 'passlib.handlers.misc.plaintext'>
+DEBUG 2018-04-04 05:24:53 registry.py registered 'hex_md5' handler: <class 'passlib.handlers.digests.hex_md5'>
+NOTICE: 2018-04-04 05:24:58 _internal.py  * Running on http://0.0.0.0:8070/ (Press CTRL+C to quit)
+NOTICE: 2018-04-04 05:24:58 _internal.py  * Restarting with stat
+DEBUG 2018-04-04 05:25:04 registry.py registered 'bcrypt' handler: <class 'passlib.handlers.bcrypt.bcrypt'>
+DEBUG 2018-04-04 05:25:04 registry.py registered 'des_crypt' handler: <class 'passlib.handlers.des_crypt.des_crypt'>
+DEBUG 2018-04-04 05:25:04 registry.py registered 'pbkdf2_sha256' handler: <class 'passlib.handlers.pbkdf2.pbkdf2_sha256'>
+DEBUG 2018-04-04 05:25:04 registry.py registered 'pbkdf2_sha512' handler: <class 'passlib.handlers.pbkdf2.pbkdf2_sha512'>
+DEBUG 2018-04-04 05:25:04 registry.py registered 'sha256_crypt' handler: <class 'passlib.handlers.sha2_crypt.sha256_crypt'>
+DEBUG 2018-04-04 05:25:04 registry.py registered 'sha512_crypt' handler: <class 'passlib.handlers.sha2_crypt.sha512_crypt'>
+DEBUG 2018-04-04 05:25:04 registry.py registered 'plaintext' handler: <class 'passlib.handlers.misc.plaintext'>
+DEBUG 2018-04-04 05:25:04 registry.py registered 'hex_md5' handler: <class 'passlib.handlers.digests.hex_md5'>
+WARNING: 2018-04-04 05:25:10 _internal.py  * Debugger is active!
+NOTICE: 2018-04-04 05:25:10 _internal.py  * Debugger PIN: 330-151-543
+NOTICE: 2018-04-04 05:27:46 _internal.py  * Detected change in '/root/work/google/penework/backend/app/views.py', reloading
+NOTICE: 2018-04-04 05:27:46 _internal.py  * Restarting with stat

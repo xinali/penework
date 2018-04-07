@@ -1,6 +1,6 @@
 import request from '@/utils/request'
 
-const base = ''
+const base = 'api'
 
 /*
 parmas:
@@ -14,18 +14,31 @@ export function getProjectListPage(params) {
     params: params
   })
 }
-export function editProject() {
+export function editProject(params) {
   return request({
-    url: `${base}/project/list`,
-    method: 'post'
+    url: `${base}/project/update`,
+    method: 'post',
+    params
   })
 }
-export function addProject() {
-  return request()
+export function addProject(params) {
+  return request({
+    url: `${base}/project/add`,
+    method: 'post',
+    params
+  })
 }
-export function removeProject() {
-  return request()
+export function removeProject(params) {
+  return request({
+    url: '/project/remove',
+    method: 'get',
+    params: params
+  })
 }
-export function batchRemoveProject() {
-  return request()
+export function batchRemoveProject(params) {
+  return request({
+    url: `${base}/project/removes`,
+    method: 'post',
+    params
+  })
 }

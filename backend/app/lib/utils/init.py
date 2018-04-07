@@ -6,7 +6,7 @@ import time
 import datetime
 
 
-def generate_data(client):
+def generate_project(client):
     client.penework.Projects.drop()
     
     projects = {
@@ -30,7 +30,69 @@ def generate_data(client):
     client.penework.Projects.insert(projects)
 
 
+def generate_ports(client):
+    port_info = {
+        'pid': 1, 
+        'ip': '192.168.2.3',
+        'port': 80,
+        'banner': '<html><head></head><body>project pid is 1 shanda</body></html>',
+        'time': datetime.datetime.now(),
+        'title': u'盛大游戏官网',
+        'hostname': 'this is test'
+    }
+    client.penework[Config.MONGODB_C_NSCAN].insert(port_info)
+    time.sleep(5)
+
+    port_info = {
+        'pid': 1, 
+        'ip': '192.165.99.89',
+        'port': 60000,
+        'banner': '<html><head></head><body>project pid is 1 shanda</body></html>',
+        'time': datetime.datetime.now(),
+        'title': u'盛大游戏官网',
+        'hostname': 'this is test'
+    }
+    client.penework[Config.MONGODB_C_NSCAN].insert(port_info)
+
+    port_info = {
+        'pid': 1, 
+        'ip': '192.168.2.3',
+        'port': 80,
+        'banner': '<html><head></head><body>project pid is 1 shanda</body></html>',
+        'time': datetime.datetime.now(),
+        'title': u'盛大游戏官网',
+        'hostname': 'this is test'
+    }
+    client.penework[Config.MONGODB_C_NSCAN].insert(port_info)
+    time.sleep(5)
+
+    port_info = {
+        'pid': 2, 
+        'ip': '99.16.9.89',
+        'port': 50000,
+        'banner': '<html><head></head><body>project pid is 1 shanda</body></html>',
+        'time': datetime.datetime.now(),
+        'title': u'百度游戏官网',
+        'hostname': 'this is test'
+    }
+    client.penework[Config.MONGODB_C_NSCAN].insert(port_info)
+
+    port_info = {
+        'pid': 2, 
+        'ip': '88.1.9.77',
+        'port': 50000,
+        'banner': '<html><head></head><body>project pid is 1 shanda</body></html>',
+        'time': datetime.datetime.now(),
+        'title': u'百度游戏官网',
+        'hostname': 'test'
+    }
+    client.penework[Config.MONGODB_C_NSCAN].insert(port_info)
+
+
+
 def initdb():
     client = MongoClient(host=Config.MONGODB_HOST, port=Config.MONGODB_PORT)
     client.penework.users.drop()
     client.penework.roles.drop()
+    generate_project(client)
+    generate_ports(client)
