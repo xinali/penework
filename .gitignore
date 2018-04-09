@@ -101,7 +101,7 @@ venv.bak/
 /site
 
 # mypy
-.txt
+*.txt
 .vscode/
 .idea
 *DS_Store
