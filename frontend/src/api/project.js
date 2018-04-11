@@ -9,7 +9,7 @@ parmas:
 */
 export function getProjectListPage(params) {
   return request({
-    url: '/project/list',
+    url: `${base}/project/list`,
     method: 'get',
     params: params
   })

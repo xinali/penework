@@ -1,6 +1,6 @@
 # 渗透测试系统penework设计及实现
 
-整体重构以前写的penework，并使用vue2重写前端展示
+整体重构以前写的penework，使用flask+vue2前后端分离的方式开发，提高使用效率
 
 ## 涉及技术
 
@@ -56,6 +56,7 @@ nscan
 ```
 
 token 设计
+
 ```
 token = jwt.encode({'time': login_time}, token_key, algorithm)
 ```
@@ -99,6 +100,7 @@ def auth_token(func):
 ## 开发进度
 
 前端 40%左右
+
 后端 30%左右 
 
 

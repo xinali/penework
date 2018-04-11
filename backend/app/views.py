@@ -4,6 +4,7 @@ import os
 import requests
 import jwt
 import time
+from functools import wraps
 
 from flask_mongoengine import MongoEngine
 from flask import Flask, url_for, request, redirect, render_template, \
@@ -48,6 +49,7 @@ def create_user_role():
 
 
 def auth_token(func):
+    @wraps(func)
     def wrapper(*args, **kwargs):
         try:
             token = ''
@@ -60,7 +62,6 @@ def auth_token(func):
             logger.exception(ex.message)
             return jsonify({'code': 5002, 'message': 'Toke is not athorithed or no token!'})
         return func(*args, **kwargs)
-
     return wrapper
 
 
@@ -141,7 +142,7 @@ def ProjectUpdate():
         logger.exception(ex.message)
 
 
-@app.route('/api/portinfo', method=['pid'])
+@app.route('/api/portinfo', methods=['pid'])
 @login_required
 @auth_token
 def PortInfo():
