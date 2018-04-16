@@ -1,8 +1,8 @@
-import Login from '../views/Login'
-import Project from '../views/Project'
-import Layout from '../views/Layout/Layout'
-import NotFound from '../views/ErrorPage/NotFound'
-import NotAuth from '../views/ErrorPage/NotAuth'
+import Login from '@/views/Login'
+import Project from '@/views/Project'
+import Layout from '@/views/Layout/Layout'
+import NotFound from '@/views/ErrorPage/NotFound'
+import NotAuth from '@/views/ErrorPage/NotAuth'
 
 export const constantRouterMap = [
   {

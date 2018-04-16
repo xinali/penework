@@ -26,6 +26,7 @@ from lib.core.db import mongo
 db = MongoEngine()
 app = Flask(__name__)
 app.config.from_object(Config)
+logger.info('-' * 100 + app.config['MONGODB_DB'])
 
 # flask_security config
 user_datastore =  MongoEngineUserDatastore(db, Users, Roles)
@@ -37,13 +38,16 @@ db.init_app(app)
 def create_user_role():
     try:
         # create admin user
-        admin = user_datastore.create_user(username='admintest', password=hashpasswd('admintest'))
+        if not user_datastore.get_user('admintest'):
+            admin = user_datastore.create_user(username='admintest', password=hashpasswd('admintest'))
         # create User role
-        user_role = user_datastore.create_role(name='User', description='Generic user role')
+        # user_role = user_datastore.create_role(name='User', description='Generic user role')
         # create Admin role
-        admin_role = user_datastore.create_role(name='Admin', description='Admin user role')
-        user_datastore.add_role_to_user(admin, admin_role)
-        # db.session.commit()
+            if not user_datastore.find_role('Admin'):
+                admin_role = user_datastore.create_role(name='Admin', description='Admin user role')
+
+                user_datastore.add_role_to_user(admin, admin_role)
+                db.session.commit()
     except Exception as ex:
         logger.exception(ex.message)
 

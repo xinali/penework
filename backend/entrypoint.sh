@@ -12,9 +12,9 @@ USE_NGINX_WORKER_PROCESSES=${NGINX_WORKER_PROCESSES:-1}
 sed -i "/worker_processes\s/c\worker_processes ${USE_NGINX_WORKER_PROCESSES};" /etc/nginx/nginx.conf
 
 # Get the listen port for Nginx, default to 80
-USE_LISTEN_PORT=${LISTEN_PORT:-80}
-# Modify Nignx config for listen port
-if ! grep -q "listen ${USE_LISTEN_PORT};" /etc/nginx/conf.d/nginx.conf ; then
-    sed -i -e "/server {/a\    listen ${USE_LISTEN_PORT};" /etc/nginx/conf.d/nginx.conf
-fi
+# USE_LISTEN_PORT=${LISTEN_PORT:-80}
+# # Modify Nignx config for listen port
+# if ! grep -q "listen ${USE_LISTEN_PORT};" /etc/nginx/conf.d/nginx.conf ; then
+#     sed -i -e "/server {/a\    listen ${USE_LISTEN_PORT};" /etc/nginx/conf.d/nginx.conf
+# fi
 exec "$@"

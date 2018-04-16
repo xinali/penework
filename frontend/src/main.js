@@ -7,14 +7,31 @@ import store from './store'
 import './icons'
 import './styles/index.scss'
 import 'element-theme-chalk'
+import { getToken } from '@/utils/auth'
 
 Vue.use(ElementUI)
-
 Vue.use(VueRouter)
 
 const router = new VueRouter({
-  mode: 'history',
+  // mode: 'history',
   routes: constantRouterMap
+})
+
+router.beforeEach((to, from, next) => {
+  try {
+    var tmp = getToken()
+    console.log(tmp)
+    if (tmp === undefined) {
+      console.log('Token is undefined')
+    }
+  } catch (e) {
+    console.log(e)
+  }
+  if (getToken() === undefined && to.path !== '/login') { // 通过vuex state获取当前的token是否存在
+    next('/login')
+  } else {
+    next()
+  }
 })
 
 new Vue({
@@ -24,19 +41,4 @@ new Vue({
   render: h => h(App),
   template: '<App />',
   components: { App }
-})
-
-router.beforeEach((to, from, next) => {
-  if (to.meta.requireAuth) { // 判断该路由是否需要登录权限
-    if (store.state.token) { // 通过vuex state获取当前的token是否存在
-      next()
-    } else {
-      next({
-        path: '/login',
-        query: { redirect: to.fullPath } // 将跳转的路由path作为参数，登录成功后跳转到该路由
-      })
-    }
-  } else {
-    next()
-  }
 })
