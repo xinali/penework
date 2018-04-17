@@ -3,14 +3,18 @@ import request from '@/utils/request'
 const base = '/api'
 
 export function loginByUsername(username, password) {
+  // const data = JSON.stringify({
   const data = {
-    username,
-    password
+    'username': username,
+    'password': password
   }
   return request({
     url: `${base}/login`,
     method: 'post',
-    data
+    data: data,
+    headers: {
+      'Content-Type': 'application/json'
+    }
   })
 }
 

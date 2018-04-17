@@ -51,6 +51,7 @@ const user = {
         loginByUsername(username, userInfo.password).then(response => {
           // 后端login返回一个token!
           const data = response.data
+          console.log(data)
           commit('SET_TOKEN', data.token)
           setToken(response.data.token)
           resolve()

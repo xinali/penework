@@ -14,11 +14,11 @@ const service = axios.create({
 service.interceptors.request.use(config => {
   // Do something before request is sent
   if (store.getters.token) {
-    config.headers['Token'] = getToken()
+    config.headers['token'] = getToken()
   }
   return config
 }, error => {
-  // Do something with request error
+  // Do something wtth request error
   console.log(error) // for debug
   Promise.reject(error)
 })
@@ -47,7 +47,7 @@ service.interceptors.response.use(
       }
       return Promise.reject('error')
     } else {
-      return response.data
+      return response
     }
   }, error => {
     console.log('err' + error)// for debug

@@ -13,27 +13,29 @@ services:
         environment:
           - MONGO_DATA_DIR=/data/db
           - MONGO_LOG_DIR=/app
+        ports:
+            - 27017:27017
         volumes:
             - ./data/mongodb:/data/db
         networks:
             pene:
                 ipv4_address: 172.18.1.3
     
-    nginx:
-        build: ./backend
-        container_name: "penework"
-        ports: 
-            - "80:80"
-        volumes:
-            - ./frontend/dist:/var/www/penework
-            - ./backend/nginx.conf:/etc/nginx/conf.d/nginx.conf
-            - ./backend/app:/app
-            - ./backend/uwsgi.ini:/etc/uwsgi/uwsgi.ini
-        links:
-            - mongodb
-        networks:
-            pene:
-                ipv4_address: 172.18.1.4
+    # nginx:
+    #     build: ./backend
+    #     container_name: "penework"
+    #     ports: 
+    #         - "80:80"
+    #     volumes:
+    #         - ./frontend/dist:/var/www/penework
+    #         - ./backend/nginx.conf:/etc/nginx/conf.d/nginx.conf
+    #         - ./backend/app:/app
+    #         - ./backend/uwsgi.ini:/etc/uwsgi/uwsgi.ini
+    #     links:
+    #         - mongodb
+    #     networks:
+    #         pene:
+    #             ipv4_address: 172.18.1.4
 
 
 networks:
