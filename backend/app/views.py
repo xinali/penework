@@ -118,16 +118,23 @@ def Login():
 @login_required
 @auth_token
 def ProjectListPage():
-    page_num = 20
+    page_num = Config.PAGE_NUMS
     try:
         projects = []
-        page = 0
+        page = 1
         if request.values.get('page'):
             page = str(request.values.get('page'))
         for project in mongo[Config.MONGODB_C_PROJECTS].find(None, {'_id': 0}):
             projects.append(project)
+
+        # return current page data
         total = len(projects)
-        pages = page * page_num
+        pages = page_num * page
+        if total > pages:
+            before_page = (page - 1) * page_num
+            next_page = page * page_num
+            projects = projects[before_page:next_page]
+            
         return jsonify({'code': 2000, 'projects': projects, 'total':len(projects)})
     except Exception as ex:
         logger.exception(ex.message)
@@ -140,8 +147,8 @@ def ProjectListPage():
 def ProjectAdd():
     try:
         pid = request.data['pid']
-        running_pro = mongo[Config.MONGODB_C_PROJECTS].find({'status': 'running'}).count()
-        if running_pro > Config.MSCAN_RUNNING:
+        running_project = mongo[Config.MONGODB_C_PROJECTS].find({'status': 'running'}).count()
+        if running_project > Config.MSCAN_RUNNING:
             pass
 
         mongo[Config.MONGODB_C_PROJECTS].insert(request.data)
