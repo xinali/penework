@@ -123,13 +123,15 @@ def ProjectListPage():
         projects = []
         page = 1
         if request.values.get('page'):
-            page = str(request.values.get('page'))
+            page = int(request.values.get('page'))
+
         for project in mongo[Config.MONGODB_C_PROJECTS].find(None, {'_id': 0}):
             projects.append(project)
 
         # return current page data
         total = len(projects)
         pages = page_num * page
+        print 'pages', pages, '#' * 200
         if total > pages:
             before_page = (page - 1) * page_num
             next_page = page * page_num
@@ -146,12 +148,24 @@ def ProjectListPage():
 @auth_token
 def ProjectAdd():
     try:
-        pid = request.data['pid']
-        running_project = mongo[Config.MONGODB_C_PROJECTS].find({'status': 'running'}).count()
-        if running_project > Config.MSCAN_RUNNING:
-            pass
+        # check pid exists
+        if request.json['pid']:
+            pid = request.json['pid']
+            # pid exists in backend or not
+            if not mongo[Config.MONGODB_C_PROJECTS].find({'pid': pid}):
+                return jsonify({'code': 4000, 'message': 'Pid doesn\'t exists!'})
 
-        mongo[Config.MONGODB_C_PROJECTS].insert(request.data)
+            # check running project
+            running_project = mongo[Config.MONGODB_C_PROJECTS].find({'status': 'running'}).count()
+            if running_project >= Config.MSCAN_RUNNING:
+                # add project in job_queue
+                pass
+            else:
+                # start scan
+                pass
+            mongo[Config.MONGODB_C_PROJECTS].insert(request.data)
+        else:
+            return jsonify({'code': 4000, 'message': 'No pid Specify'})
     except Exception as ex:
         logger.exception(ex.message)
         return jsonify({'code': 6000, 'message': 'Add project error'})

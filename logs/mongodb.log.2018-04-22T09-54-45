@@ -1,0 +1,45 @@
+2018-04-22T09:49:14.452+0000 I CONTROL  [initandlisten] MongoDB starting : pid=8 port=27017 dbpath=/data/db 64-bit host=130a647cd6ef
+2018-04-22T09:49:14.453+0000 I CONTROL  [initandlisten] db version v3.4.13
+2018-04-22T09:49:14.453+0000 I CONTROL  [initandlisten] git version: fbdef2ccc53e0fcc9afb570063633d992b2aae42
+2018-04-22T09:49:14.454+0000 I CONTROL  [initandlisten] OpenSSL version: OpenSSL 1.0.1t  3 May 2016
+2018-04-22T09:49:14.454+0000 I CONTROL  [initandlisten] allocator: tcmalloc
+2018-04-22T09:49:14.454+0000 I CONTROL  [initandlisten] modules: none
+2018-04-22T09:49:14.454+0000 I CONTROL  [initandlisten] build environment:
+2018-04-22T09:49:14.454+0000 I CONTROL  [initandlisten]     distmod: debian81
+2018-04-22T09:49:14.455+0000 I CONTROL  [initandlisten]     distarch: x86_64
+2018-04-22T09:49:14.455+0000 I CONTROL  [initandlisten]     target_arch: x86_64
+2018-04-22T09:49:14.455+0000 I CONTROL  [initandlisten] options: { security: { authorization: "enabled" }, systemLog: { destination: "file", path: "/logs/mongodb.log" } }
+2018-04-22T09:49:14.456+0000 W -        [initandlisten] Detected unclean shutdown - /data/db/mongod.lock is not empty.
+2018-04-22T09:49:14.462+0000 I -        [initandlisten] Detected data files in /data/db created by the 'wiredTiger' storage engine, so setting the active storage engine to 'wiredTiger'.
+2018-04-22T09:49:14.464+0000 W STORAGE  [initandlisten] Recovering data from the last clean checkpoint.
+2018-04-22T09:49:14.465+0000 I STORAGE  [initandlisten] wiredtiger_open config: create,cache_size=487M,session_max=20000,eviction=(threads_min=4,threads_max=4),config_base=false,statistics=(fast),log=(enabled=true,archive=true,path=journal,compressor=snappy),file_manager=(close_idle_time=100000),checkpoint=(wait=60,log_size=2GB),statistics_log=(wait=0),verbose=(recovery_progress),
+2018-04-22T09:49:15.318+0000 I STORAGE  [initandlisten] WiredTiger message [1524390555:318230][8:0x7ffff7feed40], txn-recover: Main recovery loop: starting at 2/8704
+2018-04-22T09:49:15.338+0000 I STORAGE  [initandlisten] WiredTiger message [1524390555:338381][8:0x7ffff7feed40], txn-recover: Recovering log 2 through 3
+2018-04-22T09:49:15.655+0000 I STORAGE  [initandlisten] WiredTiger message [1524390555:655348][8:0x7ffff7feed40], txn-recover: Recovering log 3 through 3
+2018-04-22T09:49:15.742+0000 I CONTROL  [initandlisten] ** WARNING: You are running this process as the root user, which is not recommended.
+2018-04-22T09:49:15.742+0000 I CONTROL  [initandlisten] 
+2018-04-22T09:49:15.751+0000 I FTDC     [initandlisten] Initializing full-time diagnostic data capture with directory '/data/db/diagnostic.data'
+2018-04-22T09:49:15.752+0000 I NETWORK  [thread1] waiting for connections on port 27017
+2018-04-22T09:49:16.012+0000 I FTDC     [ftdc] Unclean full-time diagnostic data capture shutdown detected, found interim file, some metrics may have been lost. OK
+2018-04-22T09:49:17.573+0000 I NETWORK  [thread1] connection accepted from 172.18.1.4:46648 #1 (1 connection now open)
+2018-04-22T09:49:17.573+0000 I NETWORK  [conn1] received client metadata from 172.18.1.4:46648 conn1: { driver: { name: "PyMongo", version: "3.6.1" }, os: { type: "Linux", name: "debian 8.10", architecture: "x86_64", version: "4.9.60-linuxkit-aufs" }, platform: "CPython 2.7.14.final.0" }
+2018-04-22T09:49:17.577+0000 I NETWORK  [thread1] connection accepted from 172.18.1.4:46650 #2 (2 connections now open)
+2018-04-22T09:49:17.577+0000 I NETWORK  [conn2] received client metadata from 172.18.1.4:46650 conn2: { driver: { name: "PyMongo", version: "3.6.1" }, os: { type: "Linux", name: "debian 8.10", architecture: "x86_64", version: "4.9.60-linuxkit-aufs" }, platform: "CPython 2.7.14.final.0" }
+2018-04-22T09:49:17.589+0000 I ACCESS   [conn2] Successfully authenticated as principal penework on penework
+2018-04-22T09:49:17.615+0000 I NETWORK  [thread1] connection accepted from 172.18.1.4:46652 #3 (3 connections now open)
+2018-04-22T09:49:17.615+0000 I NETWORK  [conn3] received client metadata from 172.18.1.4:46652 conn3: { driver: { name: "PyMongo", version: "3.6.1" }, os: { type: "Linux", name: "debian 8.10", architecture: "x86_64", version: "4.9.60-linuxkit-aufs" }, platform: "CPython 2.7.14.final.0" }
+2018-04-22T09:49:18.270+0000 I NETWORK  [thread1] connection accepted from 172.18.1.1:40746 #4 (4 connections now open)
+2018-04-22T09:49:18.271+0000 I NETWORK  [thread1] connection accepted from 172.18.1.1:40748 #5 (5 connections now open)
+2018-04-22T09:49:18.272+0000 I NETWORK  [conn4] received client metadata from 172.18.1.1:40746 conn4: { driver: { name: "PyMongo", version: "3.6.1" }, os: { type: "Darwin", name: "Darwin", architecture: "x86_64", version: "10.13.3" }, platform: "CPython 2.7.14.final.0" }
+2018-04-22T09:49:18.272+0000 I NETWORK  [thread1] connection accepted from 172.18.1.1:40752 #6 (6 connections now open)
+2018-04-22T09:49:18.272+0000 I NETWORK  [conn5] received client metadata from 172.18.1.1:40748 conn5: { driver: { name: "PyMongo", version: "3.6.1" }, os: { type: "Darwin", name: "Darwin", architecture: "x86_64", version: "10.13.3" }, platform: "CPython 2.7.14.final.0" }
+2018-04-22T09:49:18.273+0000 I NETWORK  [thread1] connection accepted from 172.18.1.1:40750 #7 (7 connections now open)
+2018-04-22T09:49:18.274+0000 I NETWORK  [conn6] received client metadata from 172.18.1.1:40752 conn6: { driver: { name: "PyMongo", version: "3.6.1" }, os: { type: "Darwin", name: "Darwin", architecture: "x86_64", version: "10.13.3" }, platform: "CPython 2.7.14.final.0" }
+2018-04-22T09:49:18.275+0000 I NETWORK  [thread1] connection accepted from 172.18.1.1:40754 #8 (8 connections now open)
+2018-04-22T09:49:18.275+0000 I NETWORK  [conn7] received client metadata from 172.18.1.1:40750 conn7: { driver: { name: "PyMongo", version: "3.6.1" }, os: { type: "Darwin", name: "Darwin", architecture: "x86_64", version: "10.13.3" }, platform: "CPython 2.7.14.final.0" }
+2018-04-22T09:49:18.276+0000 I NETWORK  [thread1] connection accepted from 172.18.1.1:40756 #9 (9 connections now open)
+2018-04-22T09:49:18.276+0000 I NETWORK  [conn8] received client metadata from 172.18.1.1:40754 conn8: { driver: { name: "PyMongo", version: "3.6.1" }, os: { type: "Darwin", name: "Darwin", architecture: "x86_64", version: "10.13.3" }, platform: "CPython 2.7.14.final.0" }
+2018-04-22T09:49:18.276+0000 I NETWORK  [conn9] received client metadata from 172.18.1.1:40756 conn9: { driver: { name: "PyMongo", version: "3.6.1" }, os: { type: "Darwin", name: "Darwin", architecture: "x86_64", version: "10.13.3" }, platform: "CPython 2.7.14.final.0" }
+2018-04-22T09:49:29.073+0000 I NETWORK  [thread1] connection accepted from 172.18.1.4:46676 #10 (10 connections now open)
+2018-04-22T09:49:29.074+0000 I NETWORK  [conn10] received client metadata from 172.18.1.4:46676 conn10: { driver: { name: "PyMongo", version: "3.6.1" }, os: { type: "Linux", name: "debian 8.10", architecture: "x86_64", version: "4.9.60-linuxkit-aufs" }, platform: "CPython 2.7.14.final.0" }
+2018-04-22T09:49:29.075+0000 I ACCESS   [conn10] Unauthorized: not authorized on penework to execute command { insert: "users", ordered: true, documents: [ { username: "adminwt0f", password: "$2b$12$044d7t3tbLSz6v5uj49en.q9V.M3NfiiRU.16wv3LYKpOAusRGxIO", active: true, roles: [], _id: ObjectId('5adc5aa97e8e3c000ba92239') } ], writeConcern: { w: 1 } }

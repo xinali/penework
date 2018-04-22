@@ -82,6 +82,14 @@ def auth_token(func):
 
 任务队列，利用celery，broker使用redis
 
+队列
+
+```
+scanning
+unscan
+scaned
+```
+
 ### 数据库设计
 
 ![数据库设计](https://lh3.googleusercontent.com/-7-IsjOmaxxs/WsMZfvx9oLI/AAAAAAAAHTk/qQ4ea62CG5Ab581Q59snJj_uCgkQkuQ5wCHMYCw/I/%255BUNSET%255D)

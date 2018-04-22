@@ -6,17 +6,18 @@ services:
     #     image: redis:4.0 
     #     networks:
     #         pene:
-    #             ipv4_address: 172.19.1.2
+    #             ipv4_address: 172.18.1.2
 
     mongodb:
-        image: mongo:3.4
+        build: ./mongodb
+        container_name: "mongodb"
         environment:
           - MONGO_DATA_DIR=/data/db
-          - MONGO_LOG_DIR=/app
         ports:
-            - 27017:27017
+          - 27017:27017
         volumes:
-            - ./data/mongodb:/data/db
+          - ./data/mongodb/:/data/db
+          - ./logs:/logs
         networks:
             pene:
                 ipv4_address: 172.18.1.3
