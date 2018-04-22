@@ -3,7 +3,7 @@
 import jwt
 import time
 from functools import wraps
-from IPython import embed
+# from IPython import embed
 
 from flask_mongoengine import MongoEngine
 from flask import Flask, request, redirect, request, jsonify
@@ -117,16 +117,18 @@ def Login():
 @app.route('/api/project/list', methods=['get', 'post'])
 @login_required
 @auth_token
-def ProjectList():
+def ProjectListPage():
+    page_num = 20
     try:
         projects = []
+        page = 0
+        if request.values.get('page'):
+            page = str(request.values.get('page'))
         for project in mongo[Config.MONGODB_C_PROJECTS].find(None, {'_id': 0}):
             projects.append(project)
-
-        # # import pdb
-        # pdb.set_trace()
-        # embed()
-        return jsonify({'code': 2000, 'rdata': projects})
+        total = len(projects)
+        pages = page * page_num
+        return jsonify({'code': 2000, 'projects': projects, 'total':len(projects)})
     except Exception as ex:
         logger.exception(ex.message)
         return jsonify({'code': 6000, 'message': 'Get project list error!'})

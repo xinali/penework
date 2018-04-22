@@ -103,7 +103,7 @@ venv.bak/
 # mypy
 *.txt
 .vscode/
-.idea
+.idea/
 *DS_Store
 *.log
 node_modules/

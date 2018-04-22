@@ -17,12 +17,16 @@
     <!--列表-->
     <el-table :data="projects" highlight-current-row v-loading="listLoading" @selection-change="selsChange" style="width: 100%;">
        <el-table-column type="selection" width="55"></el-table-column>
-      <el-table-column v-for="{ prop, label, width } in ShowConfigs" :key="prop" :prop="prop" :label="label" :width="width">
+      <!-- <el-table-column v-for="{ prop, label, width } in ShowConfigs" :key="prop" :prop="prop" :label="label" :width="width"> -->
+      <el-table-column v-for="{ prop, label } in ShowConfigs" :key="prop" :prop="prop" :label="label">
       </el-table-column>
-      <el-table-column label="操作" width="150">
+      <el-table-column label="操作" width="250">
           <template slot-scope="scope">
+              <el-button size="small" @click="handleEdit(scope.$index, scope.row)">编辑</el-button>
+              <el-button type="danger" size="small" @click="handleDel(scope.$index, scope.row)">删除</el-button>
               <el-dropdown>
-                <el-button type="primary">
+                <!-- <el-button type="primary"> -->
+                <el-button size="small">
                       详情<i class="el-icon-arrow-down el-icon--right"></i>
                 </el-button>
     						<el-dropdown-menu slot="dropdown">
@@ -31,8 +35,6 @@
     							<!-- <el-dropdown-item @click="getDirs>子目录信息</el-dropdown-item> -->
     						</el-dropdown-menu>
     					</el-dropdown>
-              <el-button size="small" @click="handleEdit(scope.$index, scope.row)">编辑</el-button>
-              <el-button type="danger" size="small" @click="handleDel(scope.$index, scope.row)">删除</el-button>
           </template>
   			</el-table-column>
     </el-table>
@@ -175,11 +177,10 @@
         this.page = val
         this.getProjectList()
       },
-      // 获取用户列表
+      // 获取项目列表
       getProjectList() {
         const para = {
-          page: this.page,
-          project_name: this.filters.project_name
+          page: this.page
         }
         this.listLoading = true
         getProjectListPage(para).then((res) => {
