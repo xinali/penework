@@ -17,6 +17,34 @@ from app import create_app
 
 app = create_app()
 
+from celery import Celery
+def make_celery(app):
+    celery = Celery(app.import_name, backend=app.config['CELERY_RESULT_BACKEND'],
+                    broker=app.config['CELERY_BROKER_URL'])
+    celery.conf.update(app.config)
+    TaskBase = celery.Task
+    class ContextTask(TaskBase):
+        abstract = True
+        def __call__(self, *args, **kwargs):
+            with app.app_context():
+                return TaskBase.__call__(self, *args, **kwargs)
+    celery.Task = ContextTask
+    return celery
+
+celery = make_celery(app)
+
+@celery.task 
+def scan():
+
+    from utils.masscan import MScan
+    from utils.nscan import NScan
+ 
+    mscan = MScan()
+    mscan.run()
+    nscan = NScan()
+    nscan.run()
+
+
 def auth_token(func):
     @wraps(func)
     def wrapper(*args, **kwargs):
@@ -108,8 +136,14 @@ def ProjectAdd():
         if request.json['pid']:
             pid = request.json['pid']
             # pid exists in backend or not
-            if not mongo[Config.MONGODB_C_PROJECTS].find({'pid': pid}):
-                return jsonify({'code': 4000, 'message': 'Pid doesn\'t exists!'})
+            if  mongo[Config.MONGODB_C_PROJECTS].find({'pid': pid}):
+                return jsonify({'code': 4000, 'message': 'Project exists!'})
+
+        if  request.json['domain'] and request.json['scan_ports'] and request.json['scan_ip_range']:
+            scan_ways = request.json['radio2_select_ways']
+            project_name = request.json['project_name']
+            description = request.json['description']
+            scan_requency  = request.json['scan_requency']
 
             # check running project
             running_project = mongo[Config.MONGODB_C_PROJECTS].find({'status': 'running'}).count()
