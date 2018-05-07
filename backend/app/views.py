@@ -5,61 +5,17 @@ import time
 from functools import wraps
 # from IPython import embed
 
-from flask_mongoengine import MongoEngine
-from flask import Flask, request, redirect, request, jsonify
-from flask_security import Security, MongoEngineUserDatastore, \
-    UserMixin, RoleMixin, login_required, login_user
+from flask import request, redirect, request, jsonify
+from flask_security import  login_required, login_user
 
 from models import Users, Roles
 from lib.utils.store import hashpasswd
 from lib.core.config import Config
-from lib.utils.init import initdb
 from lib.core.log import logger
 from lib.core.db import mongo
+from app import create_app
 
-# some init 
-# register logger/init db and so on
-
-db = MongoEngine()
-app = Flask(__name__)
-app.config.from_object(Config)
-# logger.info('-' * 100 + app.config['MONGODB_DB'])
-
-# flask_security config
-user_datastore = MongoEngineUserDatastore(db, Users, Roles)
-security = Security(app, user_datastore)
-
-db.init_app(app)
-
-
-@app.before_first_request
-def create_user_role():
-    # create admin user
-    try:
-        admin = None
-        if user_datastore.get_user('adminwt0f'):
-            pass
-    except Exception as ex:
-        # logger.exception(ex.message)
-        admin = user_datastore.create_user(username='adminwt0f', password=hashpasswd('adminwt0f'))
-
-    try:
-        admin_role = None
-        if user_datastore.find_role('Admin'):
-            pass
-    except Exception as ex:
-        admin_role = user_datastore.create_role(name='Admin', description='Admin user role')
-
-    try:
-        if user_datastore.find_role('User'):
-            pass
-    except Exception as ex:
-        user_role = user_datastore.create_role(name='User', description='Generic user role')
-
-    if admin and admin_role:
-        user_datastore.add_role_to_user(admin, admin_role)
-        db.session.commit()
-
+app = create_app()
 
 def auth_token(func):
     @wraps(func)
