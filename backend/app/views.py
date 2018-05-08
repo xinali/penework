@@ -3,10 +3,11 @@
 import jwt
 import time
 from functools import wraps
-# from IPython import embed
 
 from flask import request, redirect, request, jsonify
 from flask_security import  login_required, login_user
+from redis import Redis
+from rq import Queue
 
 from models import Users, Roles
 from lib.utils.store import hashpasswd
@@ -30,19 +31,19 @@ def make_celery(app):
                 return TaskBase.__call__(self, *args, **kwargs)
     celery.Task = ContextTask
     return celery
+celery = make_celery(flask_app)
 
-celery = make_celery(app)
-
-@celery.task 
-def scan():
+@celery.task()
+def scan(pid, scan_ip_range, scan_ports, scan_rate): 
 
     from utils.masscan import MScan
-    from utils.nscan import NScan
- 
+    from utils.nscan import nscan
+
     mscan = MScan()
     mscan.run()
-    nscan = NScan()
-    nscan.run()
+    nscan()
+
+    return 'Done'
 
 
 def auth_token(func):
@@ -139,11 +140,21 @@ def ProjectAdd():
             if  mongo[Config.MONGODB_C_PROJECTS].find({'pid': pid}):
                 return jsonify({'code': 4000, 'message': 'Project exists!'})
 
-        if  request.json['domain'] and request.json['scan_ports'] and request.json['scan_ip_range']:
-            scan_ways = request.json['radio2_select_ways']
+        if  request.json['domain'] and request.json['scan_ports'] \
+            and request.json['scan_ip_range'] and request.json['pid']:
+
+            # nesscery data
+            pid = request.json['pid']
+            domain = request.json['domain']
+            scan_ports = request.json['scan_ports']
+            scan_ip_range = request.json['scan_ip_range']
             project_name = request.json['project_name']
             description = request.json['description']
             scan_requency  = request.json['scan_requency']
+            scan_rate = request.json['scan_rate']
+
+            # # enter rq
+            # q.enqueue(scan, '')
 
             # check running project
             running_project = mongo[Config.MONGODB_C_PROJECTS].find({'status': 'running'}).count()

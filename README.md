@@ -27,6 +27,16 @@ nscan
 
 利用vue2 开发前端，element-ui做前端展示组件,vuex做数据存储交换
 
+登录页面
+
+![](https://lh3.googleusercontent.com/-TrwNmRZTdM8/WvFxCvjxfHI/AAAAAAAAHfc/N4TWTZB9iZQ_PM5K97LrkL4xh9V2MF0mgCHMYCw/I/15257725543271.jpg)
+
+
+项目展示
+
+![](https://lh3.googleusercontent.com/-gZO8isQKVF8/WvFw4xvkxMI/AAAAAAAAHfY/N1zYrCCimzszlNsrc0ptNgrZCaup7-aOwCHMYCw/I/15257725127266.jpg)
+
+
 ## 后端设计 
 
 后端采用mongodb
@@ -120,3 +130,4 @@ scaned
 ## 鸣谢
 
 特别感谢巡风，pocsuite等开源项目的激励和部分代码
+

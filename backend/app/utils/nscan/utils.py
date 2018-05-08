@@ -8,7 +8,7 @@ sys.path.append(os.path.split(os.path.realpath(__file__))[0]+"/../../")
 import socket
 import re
 import requests
-import lib.core.log import logger
+from lib.core.log import logger
 from lib.core.db import mongo
 from lib.core.config import Config
 
@@ -27,13 +27,13 @@ def get_scan_lists(pid):
         scan_list = []
         for ip, ports in open_ip_ports.items():
             for port in ports:
-            scan_list.append(ip+':'+port)
+                scan_list.append(ip+':'+port)
         random.shuffle(scan_list)
         return scan_list
     except Exception as ex:
         logger.exception(ex.message)
     
-def scan_port( ip, port):
+def scan_port(ip, port):
     banner = ''
     try:
         sock = socket.socket(socket.AF_INET, socket.SOCK_STREAM)

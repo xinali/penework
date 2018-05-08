@@ -2,6 +2,7 @@
 
 from flask import Flask, request, jsonify
 import jwt
+import time
 
 def auth_token(func):
     
@@ -25,6 +26,19 @@ def index():
     print request.headers['token']
     return jsonify({'test': 'this is in index'})
 
-if __name__ == '__main__':
+from redis import Redis
+from rq import Queue
+from scan_worker import scan
 
-    app.run(host='0.0.0.0', port=8070, debug=True)
+r = Redis(host='192.168.123.4', port=6379, db=0)
+print r 
+
+q = Queue(connection=r)
+
+if __name__ == '__main__':
+    print 'q_len:', len(q)
+    job = q.enqueue(scan)
+    print 'q_len:', len(q)
+    print job.result
+    time.sleep(5)
+    print job.result

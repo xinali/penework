@@ -69,6 +69,9 @@
     <!--新增界面-->
     <el-dialog title="新增项目" :visible.sync="addFormVisible" :close-on-click-modal="false" >
       <el-form :model="addForm" label-width="80px" :rules="addFormRules" ref="addForm">
+        <el-form-item label="项目ID(pid)">
+          <el-input v-model="addForm.pid" auto-complete="off"></el-input>
+        </el-form-item>
         <el-form-item label="项目名称">
           <el-input v-model="addForm.project_name" auto-complete="off"></el-input>
         </el-form-item>
@@ -90,12 +93,15 @@
             <el-form-item label="扫描频率">
               <el-input v-model="addForm.scan_frequency"></el-input>
             </el-form-item>
-            <el-form-item label="扫描方式">
+            <el-form-item label="扫描速率">
+              <el-input v-model="addForm.scan_rate"></el-input>
+            </el-form-item>
+            <!-- <el-form-item label="扫描方式">
               <el-radio-group v-model="addForm.radio2_select_ways">
                 <el-radio :label="3">masscan</el-radio>
                 <el-radio :label="6">nasscan</el-radio>
               </el-radio-group>
-            </el-form-item>
+            </el-form-item> -->
           </el-collapse-item>
           <el-collapse-item title="爬虫配置" name="2">
             <div>爬虫设置</div>
@@ -167,10 +173,10 @@
           project_name: '',
           domain: '',
           description: '',
-          radio2_select_ways: 3,
           scan_ports: [],
           scan_ip_range: '',
           scan_frequency: '',
+          scan_rate: '',
           activeName: ['1']
         },
         addFormRules: {
