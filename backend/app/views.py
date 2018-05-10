@@ -6,8 +6,6 @@ from functools import wraps
 
 from flask import request, redirect, request, jsonify
 from flask_security import  login_required, login_user
-from redis import Redis
-from rq import Queue
 
 from models import Users, Roles
 from lib.utils.store import hashpasswd
@@ -19,6 +17,7 @@ from app import create_app
 app = create_app()
 
 from celery import Celery
+from celery.result import AsyncResult
 def make_celery(app):
     celery = Celery(app.import_name, backend=app.config['CELERY_RESULT_BACKEND'],
                     broker=app.config['CELERY_BROKER_URL'])
@@ -31,7 +30,7 @@ def make_celery(app):
                 return TaskBase.__call__(self, *args, **kwargs)
     celery.Task = ContextTask
     return celery
-celery = make_celery(flask_app)
+celery = make_celery(app)
 
 @celery.task()
 def scan(pid, scan_ip_range, scan_ports, scan_rate): 
@@ -121,7 +120,14 @@ def ProjectListPage():
             before_page = (page - 1) * page_num
             next_page = page * page_num
             projects = projects[before_page:next_page]
-            
+        
+        # update project status
+        for project in projects:
+            pid = project['pid']
+            status = AsyncResult(int(pid)).state
+            mongo[Config.MONGODB_C_PROJECTS].update_one({'pid':pid}, \
+                                    {'$set': {'status': status}}, upsert=False)
+
         return jsonify({'code': 2000, 'projects': projects, 'total':len(projects)})
     except Exception as ex:
         logger.exception(ex.message)
@@ -153,18 +159,15 @@ def ProjectAdd():
             scan_requency  = request.json['scan_requency']
             scan_rate = request.json['scan_rate']
 
-            # # enter rq
-            # q.enqueue(scan, '')
-
-            # check running project
-            running_project = mongo[Config.MONGODB_C_PROJECTS].find({'status': 'running'}).count()
-            if running_project >= Config.MSCAN_RUNNING:
-                # add project in job_queue
-                pass
-            else:
-                # start scan
-                pass
-            mongo[Config.MONGODB_C_PROJECTS].insert(request.data)
+            job = scan.apply_async(pid, scan_ip_range, scan_ports, scan_rate, task_id=int(pid))
+            status = job.state
+            mongo[Config.MONGODB_C_PROJECTS].insert({'pid'pid, 
+                                                     'domain':domain, 
+                                                     'project_name':project_name, 
+                                                     'description': description,
+                                                     'status': status
+                                                    })
+            return jsonify({'codd': 2000, 'message': 'Add project successfully'})
         else:
             return jsonify({'code': 4000, 'message': 'No pid Specify'})
     except Exception as ex:

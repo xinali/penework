@@ -10,7 +10,7 @@ from lib.core.config import Config
 
 class MScan(object):
 
-    def __init__(self, pid=-1, scan_ip_range='127.0.0.1', scan_ports='1-65535', rate=10000):
+    def __init__(self, pid=-1, scan_ip_range='127.0.0.1/32', scan_ports='1-65535', rate=10000):
 
         self.scan_ip_range = scan_ip_range
         self.scan_ports = scan_ports
